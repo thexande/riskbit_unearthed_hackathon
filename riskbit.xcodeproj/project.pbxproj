@@ -10,11 +10,12 @@
 		05918718476DB68696D96A4C /* Pods_riskbitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14F0730D30321834D093784 /* Pods_riskbitTests.framework */; };
 		AF06A6DB260744E7EF6867E9 /* Pods_riskbitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */; };
 		B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */; };
-		B056F3FC1F74DC8A009C91B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3FB1F74DC8A009C91B3 /* ViewController.swift */; };
+		B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */; };
 		B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B056F4001F74DC8A009C91B3 /* Assets.xcassets */; };
 		B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */; };
 		B056F40F1F74DC8A009C91B3 /* riskbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F40E1F74DC8A009C91B3 /* riskbitTests.swift */; };
 		B056F41A1F74DC8A009C91B3 /* riskbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */; };
+		B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */; };
 		EFBB420898172B89048C50B5 /* Pods_riskbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +46,7 @@
 		A14F0730D30321834D093784 /* Pods_riskbitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F61F74DC8A009C91B3 /* riskbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riskbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B056F3FB1F74DC8A009C91B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B056F4001F74DC8A009C91B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B056F4031F74DC8A009C91B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B056F4051F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		B056F4151F74DC8A009C91B3 /* riskbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riskbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riskbitUITests.swift; sourceTree = "<group>"; };
 		B056F41B1F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,8 +137,8 @@
 		B056F3F81F74DC8A009C91B3 /* riskbit */ = {
 			isa = PBXGroup;
 			children = (
+				B0E0C7771F74E5A5000DD594 /* Controllers */,
 				B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */,
-				B056F3FB1F74DC8A009C91B3 /* ViewController.swift */,
 				B056F4001F74DC8A009C91B3 /* Assets.xcassets */,
 				B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */,
 				B056F4051F74DC8A009C91B3 /* Info.plist */,
@@ -160,6 +162,15 @@
 				B056F41B1F74DC8A009C91B3 /* Info.plist */,
 			);
 			path = riskbitUITests;
+			sourceTree = "<group>";
+		};
+		B0E0C7771F74E5A5000DD594 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */,
+				B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,7 +477,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B056F3FC1F74DC8A009C91B3 /* ViewController.swift in Sources */,
+				B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */,
+				B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */,
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
