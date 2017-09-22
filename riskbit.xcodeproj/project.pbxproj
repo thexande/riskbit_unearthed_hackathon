@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05918718476DB68696D96A4C /* Pods_riskbitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14F0730D30321834D093784 /* Pods_riskbitTests.framework */; };
+		AF06A6DB260744E7EF6867E9 /* Pods_riskbitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */; };
 		B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */; };
 		B056F3FC1F74DC8A009C91B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3FB1F74DC8A009C91B3 /* ViewController.swift */; };
-		B056F3FF1F74DC8A009C91B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F3FD1F74DC8A009C91B3 /* Main.storyboard */; };
 		B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B056F4001F74DC8A009C91B3 /* Assets.xcassets */; };
 		B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */; };
 		B056F40F1F74DC8A009C91B3 /* riskbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F40E1F74DC8A009C91B3 /* riskbitTests.swift */; };
 		B056F41A1F74DC8A009C91B3 /* riskbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */; };
+		EFBB420898172B89048C50B5 /* Pods_riskbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B17995218371A964D8710F9 /* Pods-riskbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbit.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbit/Pods-riskbit.release.xcconfig"; sourceTree = "<group>"; };
+		25EC8DC03D0C21EE020D197B /* Pods-riskbitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitUITests/Pods-riskbitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E149561D16B2034D5210E67 /* Pods-riskbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riskbit/Pods-riskbit.debug.xcconfig"; sourceTree = "<group>"; };
+		5113BED697D02F5386423D04 /* Pods-riskbitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52A916C2E4BD483AAA215A08 /* Pods-riskbitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitUITests/Pods-riskbitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14F0730D30321834D093784 /* Pods_riskbitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F61F74DC8A009C91B3 /* riskbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riskbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B056F3FB1F74DC8A009C91B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B056F3FE1F74DC8A009C91B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B056F4001F74DC8A009C91B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B056F4031F74DC8A009C91B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B056F4051F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,8 @@
 		B056F4151F74DC8A009C91B3 /* riskbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riskbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riskbitUITests.swift; sourceTree = "<group>"; };
 		B056F41B1F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBB420898172B89048C50B5 /* Pods_riskbit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05918718476DB68696D96A4C /* Pods_riskbitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +80,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF06A6DB260744E7EF6867E9 /* Pods_riskbitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F41F5010B43BC9C326F5DAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */,
+				A14F0730D30321834D093784 /* Pods_riskbitTests.framework */,
+				DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A204AC49BC16BA45440305C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E149561D16B2034D5210E67 /* Pods-riskbit.debug.xcconfig */,
+				0B17995218371A964D8710F9 /* Pods-riskbit.release.xcconfig */,
+				5113BED697D02F5386423D04 /* Pods-riskbitTests.debug.xcconfig */,
+				CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */,
+				25EC8DC03D0C21EE020D197B /* Pods-riskbitUITests.debug.xcconfig */,
+				52A916C2E4BD483AAA215A08 /* Pods-riskbitUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B056F3ED1F74DC8A009C91B3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +117,8 @@
 				B056F40D1F74DC8A009C91B3 /* riskbitTests */,
 				B056F4181F74DC8A009C91B3 /* riskbitUITests */,
 				B056F3F71F74DC8A009C91B3 /* Products */,
+				A204AC49BC16BA45440305C2 /* Pods */,
+				8F41F5010B43BC9C326F5DAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +137,6 @@
 			children = (
 				B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */,
 				B056F3FB1F74DC8A009C91B3 /* ViewController.swift */,
-				B056F3FD1F74DC8A009C91B3 /* Main.storyboard */,
 				B056F4001F74DC8A009C91B3 /* Assets.xcassets */,
 				B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */,
 				B056F4051F74DC8A009C91B3 /* Info.plist */,
@@ -132,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B056F41E1F74DC8A009C91B3 /* Build configuration list for PBXNativeTarget "riskbit" */;
 			buildPhases = (
+				9A9ECCF24097C5ADD09BB14E /* [CP] Check Pods Manifest.lock */,
 				B056F3F21F74DC8A009C91B3 /* Sources */,
 				B056F3F31F74DC8A009C91B3 /* Frameworks */,
 				B056F3F41F74DC8A009C91B3 /* Resources */,
+				38E716C17129BE5E4427BA0F /* [CP] Embed Pods Frameworks */,
+				0D96B8FBCD0C4071CE8FEF18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B056F4211F74DC8A009C91B3 /* Build configuration list for PBXNativeTarget "riskbitTests" */;
 			buildPhases = (
+				1992804FC4565C0044E642E0 /* [CP] Check Pods Manifest.lock */,
 				B056F4061F74DC8A009C91B3 /* Sources */,
 				B056F4071F74DC8A009C91B3 /* Frameworks */,
 				B056F4081F74DC8A009C91B3 /* Resources */,
+				A55227017832D3C13EC7BB54 /* [CP] Embed Pods Frameworks */,
+				DB18375AED42050BF18D5E21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B056F4241F74DC8A009C91B3 /* Build configuration list for PBXNativeTarget "riskbitUITests" */;
 			buildPhases = (
+				BF6AAD3ABD0C94CB517E8A19 /* [CP] Check Pods Manifest.lock */,
 				B056F4111F74DC8A009C91B3 /* Sources */,
 				B056F4121F74DC8A009C91B3 /* Frameworks */,
 				B056F4131F74DC8A009C91B3 /* Resources */,
+				23C6DA2703CC7C76A5DDE3A8 /* [CP] Embed Pods Frameworks */,
+				A00F2F0773D710810773D763 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +280,6 @@
 			files = (
 				B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */,
 				B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */,
-				B056F3FF1F74DC8A009C91B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +298,168 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D96B8FBCD0C4071CE8FEF18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riskbit/Pods-riskbit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1992804FC4565C0044E642E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-riskbitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23C6DA2703CC7C76A5DDE3A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riskbitUITests/Pods-riskbitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38E716C17129BE5E4427BA0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-riskbit/Pods-riskbit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireSwiftyJSON/AlamofireSwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireSwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riskbit/Pods-riskbit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A9ECCF24097C5ADD09BB14E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-riskbit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A00F2F0773D710810773D763 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riskbitUITests/Pods-riskbitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55227017832D3C13EC7BB54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF6AAD3ABD0C94CB517E8A19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-riskbitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB18375AED42050BF18D5E21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B056F3F21F74DC8A009C91B3 /* Sources */ = {
@@ -296,14 +503,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B056F3FD1F74DC8A009C91B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B056F3FE1F74DC8A009C91B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -424,6 +623,7 @@
 		};
 		B056F41F1F74DC8A009C91B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E149561D16B2034D5210E67 /* Pods-riskbit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,13 +632,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thexande.riskbit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		B056F4201F74DC8A009C91B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B17995218371A964D8710F9 /* Pods-riskbit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,13 +648,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thexande.riskbit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		B056F4221F74DC8A009C91B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5113BED697D02F5386423D04 /* Pods-riskbitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +672,7 @@
 		};
 		B056F4231F74DC8A009C91B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +689,7 @@
 		};
 		B056F4251F74DC8A009C91B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25EC8DC03D0C21EE020D197B /* Pods-riskbitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +705,7 @@
 		};
 		B056F4261F74DC8A009C91B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A916C2E4BD483AAA215A08 /* Pods-riskbitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
