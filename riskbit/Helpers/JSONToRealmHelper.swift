@@ -16,10 +16,26 @@ class JSONToRealmHelper {
         _ = firstly {
             APIService.fetchEmployeesJSON()
             }.then { json -> Void in
-                
                 guard let employee_array = json.array else { throw guardError }
                 guard let employees = processEmployeesJSON(employee_array) else { throw guardError }
+                let tasks = employees.map({ $0.tasks }).flatMap({ $0 })
+                let risks = tasks.map({ $0.risks }).flatMap({ $0 })
+                let mitigations = risks.map({ $0.mitigations }).flatMap({ $0 })
                 RealmCRUDHelper.writeEmployees(employees)
+                RealmCRUDHelper.writeTasks(tasks)
+                RealmCRUDHelper.writeRisks(risks)
+                RealmCRUDHelper.writeMitigations(mitigations)
+                
+                for employee in employees {
+                    RealmAssociationHelper.associateTasksWithEmployee(tasks: employee.tasks, employee: employee)
+                    for task in employee.tasks {
+                        RealmAssociationHelper.associateRisksWithTask(risks: task.risks, task: task)
+                        for risk in task.risks {
+                            RealmAssociationHelper.associateMitigationsWithRisk(mitigations: risk.mitigations, risk: risk)
+                        }
+                    }
+                }
+                
                 print(employees)
         }
     }

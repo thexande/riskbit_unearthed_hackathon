@@ -17,6 +17,10 @@ class RealmEmployee: Object {
     var location_name = ""
     var team_name = ""
     var tasks = List<RealmTask>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 class RealmTask: Object {
@@ -24,6 +28,10 @@ class RealmTask: Object {
     var name = ""
     var task_description = ""
     var risks = List<RealmRisk>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 class RealmRisk: Object {
@@ -31,10 +39,18 @@ class RealmRisk: Object {
     var name = ""
     var risk_description = ""
     var mitigations = List<RealmMitigation>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 class RealmMitigation: Object {
     var id = ""
     var name = ""
     var mitigation_description = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
