@@ -44,6 +44,7 @@ class TasksTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Site Tasks"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .plus, color: .black, width: 35, height: 35).withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: .plain, target: self, action: #selector(pressedNew))
     }
     

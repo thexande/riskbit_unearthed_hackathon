@@ -62,5 +62,6 @@ class RootTabBarViewController: UITabBarController {
         }
         
         JSONToRealmHelper.fetchAndProcessEmployees()
+        JSONToRealmHelper.fetchAllTasks()
     }
 }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpeechToTextSearchViewController" customModule="riskbit" customModuleProvider="target">
+            <connections>
+                <outlet property="HoldAndRelease" destination="lEZ-fm-sqm" id="LYy-YW-nKp"/>
+                <outlet property="buttonBackgroundImage" destination="cVo-HO-t5L" id="mEj-Mp-mfm"/>
+                <outlet property="textView" destination="qGS-hX-yzX" id="IaC-FV-KQp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="push_and_hold_logo" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-HO-t5L">
+                    <rect key="frame" x="84" y="230" width="207" height="207"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="207" id="6fb-ux-sgS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSH AND HOLD TO SPEAK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-wp-PQx" customClass="KerningLabel" customModule="riskbit" customModuleProvider="target">
+                    <rect key="frame" x="68" y="484" width="238" height="46"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                    <color key="textColor" red="0.96862941979999995" green="0.55722707510000002" blue="0.34095072749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                            <real key="value" value="2.71"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;APPLES VERSUS ORANGES&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-FI-7Xx" customClass="KerningLabel" customModule="riskbit" customModuleProvider="target">
+                    <rect key="frame" x="70" y="549" width="234" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="vcz-6K-Lgi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                    <color key="textColor" red="0.9868996739" green="0.2538064122" blue="0.42284029719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                            <real key="value" value="2.0800000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEZ-fm-sqm">
+                    <rect key="frame" x="172" y="318" width="30" height="30"/>
+                    <connections>
+                        <action selector="touchDown:" destination="-1" eventType="touchDown" id="TxN-pk-mtG"/>
+                        <action selector="touchUp:" destination="-1" eventType="touchUpInside" id="gsm-A5-vqS"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAY SOMETHIING LIKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwR-3m-PjL" customClass="KerningLabel" customModule="riskbit" customModuleProvider="target">
+                    <rect key="frame" x="70" y="536" width="234" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Ueh-Px-SvL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                    <color key="textColor" red="0.9868996739" green="0.2538064122" blue="0.42284029719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGS-hX-yzX">
+                    <rect key="frame" x="12" y="72" width="351" height="130"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" red="0.95298761129999998" green="0.38685744999999999" blue="0.4059576392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="qGS-hX-yzX" secondAttribute="centerX" id="4sd-L6-8lE"/>
+                <constraint firstAttribute="bottom" secondItem="LQH-FI-7Xx" secondAttribute="bottom" constant="97" id="AXt-Zt-c1A"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="LQH-FI-7Xx" secondAttribute="centerX" id="CB2-zj-Jni"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dxm-20-Ik2"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EU1-Xv-PN8"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="hwR-3m-PjL" secondAttribute="centerX" id="Ifn-0j-XS9"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="lEZ-fm-sqm" secondAttribute="centerX" id="NYh-Ga-gqW"/>
+                <constraint firstItem="LQH-FI-7Xx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="Q4w-Am-5Bh"/>
+                <constraint firstItem="hwR-3m-PjL" firstAttribute="top" secondItem="5Rl-wp-PQx" secondAttribute="bottom" constant="6" id="Rh7-dD-8rJ"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerY" secondItem="lEZ-fm-sqm" secondAttribute="centerY" id="Tv0-QW-Eit"/>
+                <constraint firstItem="qGS-hX-yzX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="Vs1-1G-ADt"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="84" id="WLt-oK-Kj0"/>
+                <constraint firstAttribute="trailing" secondItem="qGS-hX-yzX" secondAttribute="trailing" constant="12" id="ZDB-wn-fBP"/>
+                <constraint firstItem="5Rl-wp-PQx" firstAttribute="top" secondItem="cVo-HO-t5L" secondAttribute="bottom" constant="47" id="eq5-Te-faQ"/>
+                <constraint firstItem="LQH-FI-7Xx" firstAttribute="leading" secondItem="hwR-3m-PjL" secondAttribute="leading" id="i3d-Sb-9PP"/>
+                <constraint firstItem="qGS-hX-yzX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="kAN-H8-ddA"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="top" secondItem="qGS-hX-yzX" secondAttribute="bottom" constant="28" id="mcx-07-gxr"/>
+                <constraint firstItem="LQH-FI-7Xx" firstAttribute="top" secondItem="5Rl-wp-PQx" secondAttribute="bottom" constant="19" id="x2T-JX-fW8"/>
+                <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="5Rl-wp-PQx" secondAttribute="centerX" id="xZt-Vs-bzg"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="push_and_hold_logo" width="925" height="925"/>
+    </resources>
+</document>

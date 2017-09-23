@@ -37,7 +37,29 @@ class JSONToRealmHelper {
                     }
                 }
                 
-                print(employees)
+                print("loaded \(employees.count) employee from API")
+        }
+    }
+    
+    static func fetchAllTasks() {
+        _ = firstly {
+            APIService.fetchAllTasks()
+        }.then { json -> Void in
+            guard let json = json.array, let tasks = processTasksJSON(json) else { throw guardError }
+            let risks = tasks.map({ $0.risks }).flatMap({ $0 })
+            let mitigations = risks.map({ $0.mitigations }).flatMap({ $0 })
+            
+            RealmCRUDHelper.writeTasks(tasks)
+            RealmCRUDHelper.writeRisks(risks)
+            RealmCRUDHelper.writeMitigations(mitigations)
+            
+            for task in tasks {
+                RealmAssociationHelper.associateRisksWithTask(risks: task.risks, task: task)
+                for risk in task.risks {
+                    RealmAssociationHelper.associateMitigationsWithRisk(mitigations: risk.mitigations, risk: risk)
+                }
+            }
+            print("loaded \(tasks.count) tasks from API")
         }
     }
     

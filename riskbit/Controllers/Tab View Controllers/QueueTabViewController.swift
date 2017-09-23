@@ -58,7 +58,9 @@ class QueueTabViewController: UIViewController {
     }
     
     func pressedSearch() {
-        
+        present(SpeechToTextSearchViewController(completion: { (text) in
+            print(text)
+        }), animated: true, completion: nil)
     }
 }
 

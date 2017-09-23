@@ -17,6 +17,8 @@
 		B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */; };
 		B056F40F1F74DC8A009C91B3 /* riskbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F40E1F74DC8A009C91B3 /* riskbitTests.swift */; };
 		B056F41A1F74DC8A009C91B3 /* riskbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */; };
+		B0AA72EA1F76F60E0079B1E7 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72E91F76F60E0079B1E7 /* UILabel.swift */; };
+		B0AA72EC1F76F7690079B1E7 /* MappingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */; };
 		B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */; };
 		B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */; };
 		B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */; };
@@ -32,6 +34,8 @@
 		B0D3A8141F7610CD00076C82 /* GeoLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */; };
 		B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8091F7610CD00076C82 /* VideoHelper.swift */; };
 		B0D619251F76EB3400D3249F /* TaskTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D619241F76EB3400D3249F /* TaskTableCell.swift */; };
+		B0D6192C1F76F42000D3249F /* SpeechToTextSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0D6192A1F76F42000D3249F /* SpeechToTextSearchViewController.xib */; };
+		B0D6192D1F76F42000D3249F /* SpeechToTextSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D6192B1F76F42000D3249F /* SpeechToTextSearchViewController.swift */; };
 		B0DFA92D1F76122300229288 /* GeoAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA92C1F76122300229288 /* GeoAddress.swift */; };
 		B0DFA9301F76A28700229288 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA92F1F76A28700229288 /* APIService.swift */; };
 		B0DFA9321F76A52500229288 /* QueueTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9311F76A52500229288 /* QueueTabViewController.swift */; };
@@ -81,6 +85,8 @@
 		B056F4151F74DC8A009C91B3 /* riskbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riskbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riskbitUITests.swift; sourceTree = "<group>"; };
 		B056F41B1F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0AA72E91F76F60E0079B1E7 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingModels.swift; sourceTree = "<group>"; };
 		B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTabViewController.swift; sourceTree = "<group>"; };
 		B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
 		B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculationHelper.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 		B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationHelper.swift; sourceTree = "<group>"; };
 		B0D3A8091F7610CD00076C82 /* VideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
 		B0D619241F76EB3400D3249F /* TaskTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableCell.swift; sourceTree = "<group>"; };
+		B0D6192A1F76F42000D3249F /* SpeechToTextSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechToTextSearchViewController.xib; sourceTree = "<group>"; };
+		B0D6192B1F76F42000D3249F /* SpeechToTextSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextSearchViewController.swift; sourceTree = "<group>"; };
 		B0DFA92C1F76122300229288 /* GeoAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoAddress.swift; sourceTree = "<group>"; };
 		B0DFA92F1F76A28700229288 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B0DFA9311F76A52500229288 /* QueueTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTabViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 		B056F3F81F74DC8A009C91B3 /* riskbit */ = {
 			isa = PBXGroup;
 			children = (
+				B0AA72E81F76F6020079B1E7 /* Extensions */,
 				B0D619231F76EB2B00D3249F /* Views */,
 				B0DFA92E1F76A27900229288 /* Services */,
 				B0DFA92B1F76121600229288 /* Models */,
@@ -214,6 +223,14 @@
 			path = riskbitUITests;
 			sourceTree = "<group>";
 		};
+		B0AA72E81F76F6020079B1E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0AA72E91F76F60E0079B1E7 /* UILabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B0D3A7FD1F76108700076C82 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,9 +255,19 @@
 		B0D619231F76EB2B00D3249F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0D619291F76F40C00D3249F /* SpeechToTextSearch */,
 				B0D619241F76EB3400D3249F /* TaskTableCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B0D619291F76F40C00D3249F /* SpeechToTextSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B0D6192B1F76F42000D3249F /* SpeechToTextSearchViewController.swift */,
+				B0D6192A1F76F42000D3249F /* SpeechToTextSearchViewController.xib */,
+			);
+			path = SpeechToTextSearch;
 			sourceTree = "<group>";
 		};
 		B0DFA92B1F76121600229288 /* Models */ = {
@@ -248,6 +275,7 @@
 			children = (
 				B0DFA92C1F76122300229288 /* GeoAddress.swift */,
 				B0DFA9381F76A71B00229288 /* RealmModels.swift */,
+				B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D6192C1F76F42000D3249F /* SpeechToTextSearchViewController.xib in Resources */,
 				B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */,
 				B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */,
 			);
@@ -594,10 +623,13 @@
 			files = (
 				B0D3A80F1F7610CD00076C82 /* PlayerHelper.swift in Sources */,
 				B0DFA9301F76A28700229288 /* APIService.swift in Sources */,
+				B0AA72EA1F76F60E0079B1E7 /* UILabel.swift in Sources */,
 				B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */,
 				B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */,
 				B0D3A80C1F7610CD00076C82 /* PermissionHelper.swift in Sources */,
 				B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */,
+				B0AA72EC1F76F7690079B1E7 /* MappingModels.swift in Sources */,
+				B0D6192D1F76F42000D3249F /* SpeechToTextSearchViewController.swift in Sources */,
 				B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */,
 				B0DFA9371F76A62100229288 /* LeaderboardTabViewController.swift in Sources */,
 				B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */,
