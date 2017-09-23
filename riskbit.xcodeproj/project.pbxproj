@@ -15,6 +15,21 @@
 		B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */; };
 		B056F40F1F74DC8A009C91B3 /* riskbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F40E1F74DC8A009C91B3 /* riskbitTests.swift */; };
 		B056F41A1F74DC8A009C91B3 /* riskbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */; };
+		B0D3A7FA1F760F0500076C82 /* ReportsTabVoiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* ReportsTabVoiewController.swift */; };
+		B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */; };
+		B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */; };
+		B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FF1F7610CD00076C82 /* LocationHelper.swift */; };
+		B0D3A80C1F7610CD00076C82 /* PermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8001F7610CD00076C82 /* PermissionHelper.swift */; };
+		B0D3A80D1F7610CD00076C82 /* TimestampHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8011F7610CD00076C82 /* TimestampHelper.swift */; };
+		B0D3A80E1F7610CD00076C82 /* UUIDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8021F7610CD00076C82 /* UUIDHelper.swift */; };
+		B0D3A80F1F7610CD00076C82 /* PlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8031F7610CD00076C82 /* PlayerHelper.swift */; };
+		B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8041F7610CD00076C82 /* DateHelper.swift */; };
+		B0D3A8111F7610CD00076C82 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8051F7610CD00076C82 /* Reachability.swift */; };
+		B0D3A8121F7610CD00076C82 /* GlobalStyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8061F7610CD00076C82 /* GlobalStyleHelper.swift */; };
+		B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8071F7610CD00076C82 /* FontAwesomeHelper.swift */; };
+		B0D3A8141F7610CD00076C82 /* GeoLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */; };
+		B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8091F7610CD00076C82 /* VideoHelper.swift */; };
+		B0DFA92D1F76122300229288 /* GeoAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA92C1F76122300229288 /* GeoAddress.swift */; };
 		B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */; };
 		EFBB420898172B89048C50B5 /* Pods_riskbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +71,21 @@
 		B056F4151F74DC8A009C91B3 /* riskbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riskbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riskbitUITests.swift; sourceTree = "<group>"; };
 		B056F41B1F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D3A7F91F760F0500076C82 /* ReportsTabVoiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTabVoiewController.swift; sourceTree = "<group>"; };
+		B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
+		B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculationHelper.swift; sourceTree = "<group>"; };
+		B0D3A7FF1F7610CD00076C82 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		B0D3A8001F7610CD00076C82 /* PermissionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionHelper.swift; sourceTree = "<group>"; };
+		B0D3A8011F7610CD00076C82 /* TimestampHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimestampHelper.swift; sourceTree = "<group>"; };
+		B0D3A8021F7610CD00076C82 /* UUIDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDHelper.swift; sourceTree = "<group>"; };
+		B0D3A8031F7610CD00076C82 /* PlayerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerHelper.swift; sourceTree = "<group>"; };
+		B0D3A8041F7610CD00076C82 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		B0D3A8051F7610CD00076C82 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B0D3A8061F7610CD00076C82 /* GlobalStyleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalStyleHelper.swift; sourceTree = "<group>"; };
+		B0D3A8071F7610CD00076C82 /* FontAwesomeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeHelper.swift; sourceTree = "<group>"; };
+		B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationHelper.swift; sourceTree = "<group>"; };
+		B0D3A8091F7610CD00076C82 /* VideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		B0DFA92C1F76122300229288 /* GeoAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoAddress.swift; sourceTree = "<group>"; };
 		B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +167,8 @@
 		B056F3F81F74DC8A009C91B3 /* riskbit */ = {
 			isa = PBXGroup;
 			children = (
+				B0DFA92B1F76121600229288 /* Models */,
+				B0D3A7FD1F76108700076C82 /* Helpers */,
 				B0E0C7771F74E5A5000DD594 /* Controllers */,
 				B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */,
 				B056F4001F74DC8A009C91B3 /* Assets.xcassets */,
@@ -164,11 +196,40 @@
 			path = riskbitUITests;
 			sourceTree = "<group>";
 		};
+		B0D3A7FD1F76108700076C82 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B0D3A8041F7610CD00076C82 /* DateHelper.swift */,
+				B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */,
+				B0D3A8071F7610CD00076C82 /* FontAwesomeHelper.swift */,
+				B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */,
+				B0D3A8061F7610CD00076C82 /* GlobalStyleHelper.swift */,
+				B0D3A7FF1F7610CD00076C82 /* LocationHelper.swift */,
+				B0D3A8001F7610CD00076C82 /* PermissionHelper.swift */,
+				B0D3A8031F7610CD00076C82 /* PlayerHelper.swift */,
+				B0D3A8051F7610CD00076C82 /* Reachability.swift */,
+				B0D3A8011F7610CD00076C82 /* TimestampHelper.swift */,
+				B0D3A8021F7610CD00076C82 /* UUIDHelper.swift */,
+				B0D3A8091F7610CD00076C82 /* VideoHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B0DFA92B1F76121600229288 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0DFA92C1F76122300229288 /* GeoAddress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B0E0C7771F74E5A5000DD594 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */,
 				B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */,
+				B0D3A7F91F760F0500076C82 /* ReportsTabVoiewController.swift */,
+				B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -366,22 +427,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-riskbit/Pods-riskbit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireSwiftyJSON/AlamofireSwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/PermissionScope/PermissionScope.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireSwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PermissionScope.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,9 +544,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D3A80F1F7610CD00076C82 /* PlayerHelper.swift in Sources */,
 				B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */,
+				B0D3A7FA1F760F0500076C82 /* ReportsTabVoiewController.swift in Sources */,
+				B0D3A80C1F7610CD00076C82 /* PermissionHelper.swift in Sources */,
+				B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */,
+				B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */,
+				B0DFA92D1F76122300229288 /* GeoAddress.swift in Sources */,
+				B0D3A80E1F7610CD00076C82 /* UUIDHelper.swift in Sources */,
+				B0D3A8141F7610CD00076C82 /* GeoLocationHelper.swift in Sources */,
+				B0D3A8121F7610CD00076C82 /* GlobalStyleHelper.swift in Sources */,
 				B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */,
+				B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */,
+				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
+				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
+				B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */,
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,
+				B0D3A80D1F7610CD00076C82 /* TimestampHelper.swift in Sources */,
+				B0D3A8111F7610CD00076C82 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

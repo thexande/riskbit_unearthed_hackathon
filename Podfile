@@ -11,7 +11,9 @@ target 'riskbit' do
     pod 'Realm'
     pod 'RealmSwift'
     pod 'AlamofireSwiftyJSON'
-
+    pod 'SwiftLocation', '~> 1.1'
+    pod 'ALCameraViewController'
+    pod 'PermissionScope'
 
   target 'riskbitTests' do
     inherit! :search_paths
