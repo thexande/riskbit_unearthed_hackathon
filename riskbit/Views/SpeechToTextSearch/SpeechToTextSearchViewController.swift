@@ -9,8 +9,8 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
     @IBOutlet weak var HoldAndRelease: UIButton!
     @IBOutlet weak var buttonBackgroundImage: UIImageView!
     private let pscope = PermissionScope()
-    private let selectedImage: UIImage? = UIImage(named: "push_and_hold_selected")
-    private let unselectedImage: UIImage? = UIImage(named: "push_and_hold_logo")
+    private let selectedImage: UIImage = FontAwesomeHelper.iconToImage(icon: .microphone, color: .black, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+    private let unselectedImage: UIImage = FontAwesomeHelper.iconToImage(icon: .microphone, color: .white, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
     private var speechRecognizer: SFSpeechRecognizer!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest!
     private var recognitionTask: SFSpeechRecognitionTask!
@@ -20,6 +20,7 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
     private var pollOptionOne: String?
     private var pollOptionTwo: String?
     private var userSpeechString: String?
+    private var hasSeenPermissions = false
     
     
     // MARK:- Lifecycle
@@ -37,7 +38,7 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
         edgesForExtendedLayout = []
         // english, do you speak it!?
         prepareRecognizer(locale: defaultLocale)
-        pushButtonImage.image = FontAwesomeHelper.iconToImage(icon: .microphone, color: .black, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        pushButtonImage.image = FontAwesomeHelper.iconToImage(icon: .microphone, color: .white, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         
         let blurBackgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         blurBackgroundView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,13 +50,21 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        SFSpeechRecognizer.requestAuthorization { authStatus in }
-        pscope.addPermission(MicrophonePermission(), message: "May Riskbit access your microphone?")
-        pscope.show({ finished, results in
-            print("got results \(results)")
-        }, cancelled: { (results) -> Void in
-            print("thing was cancelled")
-        })
+        if !hasSeenPermissions {
+            SFSpeechRecognizer.requestAuthorization { authStatus in }
+            pscope.addPermission(MicrophonePermission(), message: "May Riskbit access your microphone?")
+            pscope.show({ finished, results in
+                print("got results \(results)")
+            }, cancelled: { (results) -> Void in
+                print("thing was cancelled")
+            })
+        }
+        hasSeenPermissions = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        textView.text = ""
     }
     
     override func didReceiveMemoryWarning() {
