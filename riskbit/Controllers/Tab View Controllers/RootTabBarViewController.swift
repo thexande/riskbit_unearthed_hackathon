@@ -16,6 +16,7 @@ class RootTabBarViewController: UITabBarController {
         let vc = UINavigationController(rootViewController: QueueTabViewController())
         let cheersBoardIcon = FontAwesomeHelper.iconToImage(icon: FontAwesome.list, color: .black, width: 35, height: 35)
         let item = UITabBarItem(title: "queue".uppercased(), image: cheersBoardIcon, selectedImage: cheersBoardIcon)
+        vc.navigationController?.navigationBar.prefersLargeTitles = true
         vc.tabBarItem = item
         return vc
     }()
@@ -24,6 +25,7 @@ class RootTabBarViewController: UITabBarController {
         let vc = UINavigationController(rootViewController: TasksTabViewController())
         let cheersBoardIcon = FontAwesomeHelper.iconToImage(icon: FontAwesome.check, color: .black, width: 35, height: 35)
         let item = UITabBarItem(title: "tasks".uppercased(), image: cheersBoardIcon, selectedImage: cheersBoardIcon)
+        vc.navigationController?.navigationBar.prefersLargeTitles = true
         vc.tabBarItem = item
         return vc
     }()
@@ -32,6 +34,7 @@ class RootTabBarViewController: UITabBarController {
         let exploreIcon = FontAwesomeHelper.iconToImage(icon: FontAwesome.trophy, color: .black, width: 35, height: 35)
         let vc = UINavigationController(rootViewController: LeaderboardTabViewController())
         let item = UITabBarItem(title: "leaderboard".uppercased(), image: exploreIcon, selectedImage: exploreIcon)
+        vc.navigationController?.navigationBar.prefersLargeTitles = true
         vc.tabBarItem = item
         return vc
     }()
@@ -40,6 +43,7 @@ class RootTabBarViewController: UITabBarController {
         let myCheersIcon = FontAwesomeHelper.iconToImage(icon: FontAwesome.user, color: .black, width: 35, height: 35)
         let vc = UINavigationController(rootViewController: UIViewController())
         let item = UITabBarItem(title: "account".uppercased(), image: myCheersIcon, selectedImage: myCheersIcon)
+        vc.navigationController?.navigationBar.prefersLargeTitles = true
         vc.tabBarItem = item
         return vc
     }()

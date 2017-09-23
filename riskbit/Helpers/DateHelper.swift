@@ -37,4 +37,10 @@ class DateHelper {
     static func currentUnixTimestamp() -> Int {
         return Int(Date().timeIntervalSince1970 * Double(-1000))
     }
+    
+    static func readableDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: date)
+    }
 }

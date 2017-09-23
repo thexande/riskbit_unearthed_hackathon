@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = RootTabBarViewController()
         window?.makeKeyAndVisible()
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor.black
+        ]
+        
         return true
     }
 

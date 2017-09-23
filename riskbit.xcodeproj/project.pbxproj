@@ -31,6 +31,7 @@
 		B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8071F7610CD00076C82 /* FontAwesomeHelper.swift */; };
 		B0D3A8141F7610CD00076C82 /* GeoLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */; };
 		B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A8091F7610CD00076C82 /* VideoHelper.swift */; };
+		B0D619251F76EB3400D3249F /* TaskTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D619241F76EB3400D3249F /* TaskTableCell.swift */; };
 		B0DFA92D1F76122300229288 /* GeoAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA92C1F76122300229288 /* GeoAddress.swift */; };
 		B0DFA9301F76A28700229288 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA92F1F76A28700229288 /* APIService.swift */; };
 		B0DFA9321F76A52500229288 /* QueueTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9311F76A52500229288 /* QueueTabViewController.swift */; };
@@ -94,6 +95,7 @@
 		B0D3A8071F7610CD00076C82 /* FontAwesomeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeHelper.swift; sourceTree = "<group>"; };
 		B0D3A8081F7610CD00076C82 /* GeoLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationHelper.swift; sourceTree = "<group>"; };
 		B0D3A8091F7610CD00076C82 /* VideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		B0D619241F76EB3400D3249F /* TaskTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableCell.swift; sourceTree = "<group>"; };
 		B0DFA92C1F76122300229288 /* GeoAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoAddress.swift; sourceTree = "<group>"; };
 		B0DFA92F1F76A28700229288 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B0DFA9311F76A52500229288 /* QueueTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTabViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		B056F3F81F74DC8A009C91B3 /* riskbit */ = {
 			isa = PBXGroup;
 			children = (
+				B0D619231F76EB2B00D3249F /* Views */,
 				B0DFA92E1F76A27900229288 /* Services */,
 				B0DFA92B1F76121600229288 /* Models */,
 				B0D3A7FD1F76108700076C82 /* Helpers */,
@@ -230,6 +233,14 @@
 				B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B0D619231F76EB2B00D3249F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0D619241F76EB3400D3249F /* TaskTableCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B0DFA92B1F76121600229288 /* Models */ = {
@@ -602,6 +613,7 @@
 				B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */,
 				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
 				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
+				B0D619251F76EB3400D3249F /* TaskTableCell.swift in Sources */,
 				B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */,
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,
 				B0D3A80D1F7610CD00076C82 /* TimestampHelper.swift in Sources */,
