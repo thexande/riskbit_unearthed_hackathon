@@ -1,5 +1,5 @@
 //
-//  ReportsHomeTabVoiewController.swift
+//  TasksHomeTabVoiewController.swift
 //  riskbit
 //
 //  Created by Alexander Murphy on 9/22/17.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ReportsHomeTabViewController: UIViewController {
+class TasksTabViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
