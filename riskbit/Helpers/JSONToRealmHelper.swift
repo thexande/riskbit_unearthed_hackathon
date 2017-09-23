@@ -21,6 +21,7 @@ class JSONToRealmHelper {
                 let tasks = employees.map({ $0.tasks }).flatMap({ $0 })
                 let risks = tasks.map({ $0.risks }).flatMap({ $0 })
                 let mitigations = risks.map({ $0.mitigations }).flatMap({ $0 })
+                
                 RealmCRUDHelper.writeEmployees(employees)
                 RealmCRUDHelper.writeTasks(tasks)
                 RealmCRUDHelper.writeRisks(risks)
@@ -45,9 +46,9 @@ class JSONToRealmHelper {
         for employee in employees {
             guard let id = employee.dictionary?["employeeid"]?.stringValue,
                 let position = employee.dictionary?["positionname"]?.stringValue,
-                let location = employee.dictionary?["locationname"]?.stringValue,
-                let tasks = employee.dictionary?["tasks"]?.array,
-                let taskModels = processTasksJSON(tasks) else { return nil }
+                let location = employee.dictionary?["locationname"]?.stringValue else { return nil }
+            let tasks = employee.dictionary?["tasks"]?.array ?? []
+            guard let taskModels = processTasksJSON(tasks) else { return nil }
             let employeeModel = Employee(id: id, position_name: position, location_name: location, tasks: taskModels)
             returnEmployees.append(employeeModel)
         }
@@ -59,10 +60,10 @@ class JSONToRealmHelper {
         for task in tasks {
             guard let id = task.dictionary?["taskid"]?.stringValue,
                 let name = task.dictionary?["taskname"]?.stringValue,
-                let description = task.dictionary?["taskdesc"]?.stringValue,
-                let risks = task.dictionary?["risks"]?.array,
-                let riskModels = processRisksJSON(risks) else { return nil }
+                let description = task.dictionary?["taskdesc"]?.stringValue else { return nil }
             
+            let risks = task.dictionary?["risks"]?.array ?? []
+            guard let riskModels = processRisksJSON(risks) else { return nil }
             let taskIntermediate = Task(id: id, name: name, description: description, risks: riskModels)
             returnTasks.append(taskIntermediate)
         }
@@ -75,13 +76,12 @@ class JSONToRealmHelper {
         for risk in risks {
             guard let id = risk.dictionary?["riskid"]?.stringValue,
                 let description = risk.dictionary?["riskdesc"]?.stringValue,
-                let name = risk.dictionary?["riskname"]?.stringValue,
-                let mitigations = risk.dictionary?["mitigations"]?.array,
-                let mitigationModels = processMitigationsJSON(mitigations) else { return nil }
+                let name = risk.dictionary?["riskname"]?.stringValue else { return nil }
+            let mitigations = risk.dictionary?["mitigations"]?.array ?? []
+            guard let mitigationModels = processMitigationsJSON(mitigations) else { return nil }
             let riskModel = Risk(id: id, name: name, description: description, mitigations: mitigationModels)
             returnRisks.append(riskModel)
         }
-        
         return returnRisks
     }
     

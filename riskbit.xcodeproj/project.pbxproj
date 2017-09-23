@@ -17,7 +17,7 @@
 		B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */; };
 		B056F40F1F74DC8A009C91B3 /* riskbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F40E1F74DC8A009C91B3 /* riskbitTests.swift */; };
 		B056F41A1F74DC8A009C91B3 /* riskbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */; };
-		B0D3A7FA1F760F0500076C82 /* TasksTabVoiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* TasksTabVoiewController.swift */; };
+		B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */; };
 		B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */; };
 		B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */; };
 		B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FF1F7610CD00076C82 /* LocationHelper.swift */; };
@@ -80,7 +80,7 @@
 		B056F4151F74DC8A009C91B3 /* riskbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riskbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riskbitUITests.swift; sourceTree = "<group>"; };
 		B056F41B1F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0D3A7F91F760F0500076C82 /* TasksTabVoiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTabVoiewController.swift; sourceTree = "<group>"; };
+		B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTabViewController.swift; sourceTree = "<group>"; };
 		B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
 		B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculationHelper.swift; sourceTree = "<group>"; };
 		B0D3A7FF1F7610CD00076C82 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				B0DFA9311F76A52500229288 /* QueueTabViewController.swift */,
-				B0D3A7F91F760F0500076C82 /* TasksTabVoiewController.swift */,
+				B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */,
 				B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */,
 				B0DFA9341F76A5CA00229288 /* AccountTabViewController.swift */,
 				B0DFA9361F76A62100229288 /* LeaderboardTabViewController.swift */,
@@ -584,7 +584,7 @@
 				B0D3A80F1F7610CD00076C82 /* PlayerHelper.swift in Sources */,
 				B0DFA9301F76A28700229288 /* APIService.swift in Sources */,
 				B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */,
-				B0D3A7FA1F760F0500076C82 /* TasksTabVoiewController.swift in Sources */,
+				B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */,
 				B0D3A80C1F7610CD00076C82 /* PermissionHelper.swift in Sources */,
 				B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */,
 				B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */,
