@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0CE7DCAB4CDB561273024B7F7C578D76"
+               BlueprintIdentifier = "642FF6013E7CB29A169EDC9F62657786"
                BuildableName = "Pods_riskbit.framework"
                BlueprintName = "Pods-riskbit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0CE7DCAB4CDB561273024B7F7C578D76"
+            BlueprintIdentifier = "642FF6013E7CB29A169EDC9F62657786"
             BuildableName = "Pods_riskbit.framework"
             BlueprintName = "Pods-riskbit"
             ReferencedContainer = "container:Pods.xcodeproj">

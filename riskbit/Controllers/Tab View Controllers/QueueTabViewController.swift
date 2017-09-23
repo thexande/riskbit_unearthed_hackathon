@@ -9,15 +9,70 @@
 import Foundation
 import UIKit
 import RealmSwift
+import FuzzyMatchingSwift
+
 
 class QueueTabViewController: UIViewController {
-    lazy var tasks: Results<RealmTask>? = {
+    lazy var textToSearchVC: UIViewController = {
+        let vc = SpeechToTextSearchViewController(completion: { [weak self] (searchText) in
+            print(searchText)
+            self?.searchWithText(searchText)
+        })
+        vc.modalPresentationStyle = .overFullScreen
+        return vc
+    }()
+    
+    lazy var tasks: [RealmTask]? = {
         do {
             let realm = try Realm()
-            return realm.objects(RealmTask.self)
+            return Array(realm.objects(RealmTask.self))
             
         } catch _ { return nil }
     }()
+    
+    let unNeededWords: [String] = [
+        "a","about" ,"all" ,"also" ,"and" ,"as" ,"at" ,"be" ,"because" ,"but" ,"by" ,"can" ,"come" ,"could" ,"day" ,"do" ,"even" ,"find" ,"first" ,"for" ,"from" ,"get" ,"give" ,"go" ,"have" ,"he" ,"her" ,"here" ,"him" ,"his" ,"how" ,"I" ,"if" ,"in" ,"into" ,"it" ,"its" ,"just" ,"know" ,"like" ,"look" ,"make" ,"man" ,"many" ,"me" ,"more" ,"my" ,"new" ,"no" ,"not" ,"now" ,"of" ,"on" ,"one" ,"only" ,"or" ,"other" ,"our" ,"out" ,"people" ,"say" ,"see" ,"she" ,"so" ,"some" ,"take" ,"tell" ,"than" ,"that" ,"the" ,"their" ,"them" ,"then" ,"there" ,"these" ,"they" ,"thing" ,"think" ,"this" ,"those" ,"time" ,"to" ,"two" ,"up" ,"use" ,"very" ,"want" ,"way" ,"we" ,"well" ,"what" ,"when" ,"which" ,"who" ,"will" ,"with" ,"would" ,"year" ,"you" ,"your"
+    ]
+    
+    func produceTaskArray(_ task: RealmTask) -> [String] {
+        var descriptionArr = task.task_description.lowercased().components(separatedBy: " ")
+        descriptionArr.append(contentsOf: task.name.lowercased().components(separatedBy: " "))
+        return descriptionArr
+    }
+    
+    func removeCommonWordsFromSearch(_ searchText: String)  -> Set<String> {
+        return Set(searchText.components(separatedBy: " ").filter({ !unNeededWords.contains($0) }))
+    }
+    
+    func searchWithText(_ searchText: String) {
+        do {
+            let realm = try Realm()
+            let tasks = realm.objects(RealmTask.self).filter( { [weak self] (task) -> Bool in
+                guard let strongSelf = self else { return false }
+                var descriptionArr = strongSelf.produceTaskArray(task)
+                
+                let descriptionSet = Set(descriptionArr)
+                let searchSet = strongSelf.removeCommonWordsFromSearch(searchText)
+                
+                let occurances = descriptionSet.union(searchSet).count
+                return occurances != 0
+            }).sorted(by: { (task_one, task_two) -> Bool in
+                let searchSet = Set(searchText.components(separatedBy: " "))
+                let taskOneDescriptionSet = Set(produceTaskArray(task_one))
+                let taskTwoDescriptionSet = Set(produceTaskArray(task_two))
+                
+                let one_occurances = taskOneDescriptionSet.intersection(searchSet).count
+                let two_occurances = taskTwoDescriptionSet.intersection(searchSet).count
+                
+                return one_occurances > two_occurances
+            })
+            
+            self.tasks = tasks
+            tableView.reloadData()
+            
+            print(tasks.count)
+        } catch _ { return }
+    }
     
     lazy var tableView: UITableView = {
         let view = UITableView()
@@ -48,7 +103,7 @@ class QueueTabViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
         
-        title = "Tasks for \(DateHelper.readableDate(Date()))"
+//        title = "Tasks for \(DateHelper.readableDate(Date()))"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .search, color: .black, width: 35, height: 35).withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: .plain, target: self, action: #selector(pressedSearch))
     }
     
@@ -58,9 +113,9 @@ class QueueTabViewController: UIViewController {
     }
     
     func pressedSearch() {
-        present(SpeechToTextSearchViewController(completion: { (text) in
-            print(text)
-        }), animated: true, completion: nil)
+        present(textToSearchVC, animated: true, completion: nil)
+//        searchWithText("yea im moving cables")
+
     }
 }
 

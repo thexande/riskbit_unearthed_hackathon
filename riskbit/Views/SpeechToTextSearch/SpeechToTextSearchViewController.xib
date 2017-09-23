@@ -21,6 +21,7 @@
             <connections>
                 <outlet property="HoldAndRelease" destination="lEZ-fm-sqm" id="LYy-YW-nKp"/>
                 <outlet property="buttonBackgroundImage" destination="cVo-HO-t5L" id="mEj-Mp-mfm"/>
+                <outlet property="pushButtonImage" destination="cVo-HO-t5L" id="bsF-OV-5QN"/>
                 <outlet property="textView" destination="qGS-hX-yzX" id="IaC-FV-KQp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,16 +31,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="push_and_hold_logo" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-HO-t5L">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-HO-t5L">
                     <rect key="frame" x="84" y="230" width="207" height="207"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="207" id="6fb-ux-sgS"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSH AND HOLD TO SPEAK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-wp-PQx" customClass="KerningLabel" customModule="riskbit" customModuleProvider="target">
-                    <rect key="frame" x="68" y="484" width="238" height="46"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSH AND HOLD TO SPEAK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-wp-PQx">
+                    <rect key="frame" x="98" y="484" width="178" height="46"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                    <color key="textColor" red="0.96862941979999995" green="0.55722707510000002" blue="0.34095072749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="kerning">
@@ -47,13 +48,13 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;APPLES VERSUS ORANGES&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-FI-7Xx" customClass="KerningLabel" customModule="riskbit" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;APPLES VERSUS ORANGES&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-FI-7Xx">
                     <rect key="frame" x="70" y="549" width="234" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="vcz-6K-Lgi"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                    <color key="textColor" red="0.9868996739" green="0.2538064122" blue="0.42284029719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="kerning">
@@ -68,13 +69,13 @@
                         <action selector="touchUp:" destination="-1" eventType="touchUpInside" id="gsm-A5-vqS"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAY SOMETHIING LIKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwR-3m-PjL" customClass="KerningLabel" customModule="riskbit" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAY SOMETHIING LIKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwR-3m-PjL">
                     <rect key="frame" x="70" y="536" width="234" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Ueh-Px-SvL"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                    <color key="textColor" red="0.9868996739" green="0.2538064122" blue="0.42284029719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGS-hX-yzX">
@@ -84,7 +85,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="cVo-HO-t5L" firstAttribute="centerX" secondItem="qGS-hX-yzX" secondAttribute="centerX" id="4sd-L6-8lE"/>
                 <constraint firstAttribute="bottom" secondItem="LQH-FI-7Xx" secondAttribute="bottom" constant="97" id="AXt-Zt-c1A"/>
@@ -108,7 +109,4 @@
             </constraints>
         </view>
     </objects>
-    <resources>
-        <image name="push_and_hold_logo" width="925" height="925"/>
-    </resources>
 </document>

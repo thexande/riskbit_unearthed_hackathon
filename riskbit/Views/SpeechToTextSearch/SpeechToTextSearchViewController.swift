@@ -5,6 +5,7 @@ import PermissionScope
 class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDelegate {
     let completion: ((_ text_attribute: String) -> Void)
     @IBOutlet weak var textView: UILabel!
+    @IBOutlet weak var pushButtonImage: UIImageView!
     @IBOutlet weak var HoldAndRelease: UIButton!
     @IBOutlet weak var buttonBackgroundImage: UIImageView!
     private let pscope = PermissionScope()
@@ -36,12 +37,20 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
         edgesForExtendedLayout = []
         // english, do you speak it!?
         prepareRecognizer(locale: defaultLocale)
+        pushButtonImage.image = FontAwesomeHelper.iconToImage(icon: .microphone, color: .black, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        
+        let blurBackgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        blurBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        view.insertSubview(blurBackgroundView, at: 0)
+        
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[background]|", options: [], metrics: nil, views: ["background":blurBackgroundView]))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[background]|", options: [], metrics: nil, views: ["background":blurBackgroundView]))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         SFSpeechRecognizer.requestAuthorization { authStatus in }
-        pscope.addPermission(MicrophonePermission(), message: "May SparkPoll access your microphone?")
+        pscope.addPermission(MicrophonePermission(), message: "May Riskbit access your microphone?")
         pscope.show({ finished, results in
             print("got results \(results)")
         }, cancelled: { (results) -> Void in
@@ -95,6 +104,9 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
                 if(isFinal == true) {
                     guard let speechString = strongSelf.userSpeechString else { return }
                     print("user speech here \(speechString)")
+                    strongSelf.dismiss(animated: true, completion: {
+                        strongSelf.completion(speechString)
+                    })
 //                    let descriptionVC = AddTextDescriptionViewController(descriptionText: speechString, completion: strongSelf.completion)
 //                    strongSelf.navigationController?.pushViewController(descriptionVC, animated: true)
                 }

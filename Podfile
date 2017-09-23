@@ -14,6 +14,7 @@ target 'riskbit' do
     pod 'SwiftLocation', '~> 1.1'
     pod 'ALCameraViewController'
     pod 'PermissionScope'
+    pod "FuzzyMatchingSwift"
 
   target 'riskbitTests' do
     inherit! :search_paths
