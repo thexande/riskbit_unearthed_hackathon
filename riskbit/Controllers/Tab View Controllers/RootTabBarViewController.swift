@@ -56,5 +56,7 @@ class RootTabBarViewController: UITabBarController {
         } catch let error {
             print(error.localizedDescription)
         }
+        
+        JSONToRealmHelper.fetchAndProcessEmployees()
     }
 }

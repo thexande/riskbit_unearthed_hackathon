@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		05918718476DB68696D96A4C /* Pods_riskbitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14F0730D30321834D093784 /* Pods_riskbitTests.framework */; };
 		AF06A6DB260744E7EF6867E9 /* Pods_riskbitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */; };
+		B01B0E101F76BFAB007A6A62 /* JSONToRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */; };
+		B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */; };
 		B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */; };
 		B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */; };
 		B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B056F4001F74DC8A009C91B3 /* Assets.xcassets */; };
@@ -34,7 +36,7 @@
 		B0DFA9321F76A52500229288 /* QueueTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9311F76A52500229288 /* QueueTabViewController.swift */; };
 		B0DFA9351F76A5CA00229288 /* AccountTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9341F76A5CA00229288 /* AccountTabViewController.swift */; };
 		B0DFA9371F76A62100229288 /* LeaderboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9361F76A62100229288 /* LeaderboardTabViewController.swift */; };
-		B0DFA9391F76A71B00229288 /* RealmEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9381F76A71B00229288 /* RealmEmployee.swift */; };
+		B0DFA9391F76A71B00229288 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9381F76A71B00229288 /* RealmModels.swift */; };
 		B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */; };
 		EFBB420898172B89048C50B5 /* Pods_riskbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		52A916C2E4BD483AAA215A08 /* Pods-riskbitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitUITests/Pods-riskbitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14F0730D30321834D093784 /* Pods_riskbitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONToRealmHelper.swift; sourceTree = "<group>"; };
+		B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCrudHelper.swift; sourceTree = "<group>"; };
 		B056F3F61F74DC8A009C91B3 /* riskbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riskbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +99,7 @@
 		B0DFA9311F76A52500229288 /* QueueTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTabViewController.swift; sourceTree = "<group>"; };
 		B0DFA9341F76A5CA00229288 /* AccountTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabViewController.swift; sourceTree = "<group>"; };
 		B0DFA9361F76A62100229288 /* LeaderboardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTabViewController.swift; sourceTree = "<group>"; };
-		B0DFA9381F76A71B00229288 /* RealmEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEmployee.swift; sourceTree = "<group>"; };
+		B0DFA9381F76A71B00229288 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +226,8 @@
 				B0D3A8011F7610CD00076C82 /* TimestampHelper.swift */,
 				B0D3A8021F7610CD00076C82 /* UUIDHelper.swift */,
 				B0D3A8091F7610CD00076C82 /* VideoHelper.swift */,
+				B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */,
+				B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -230,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				B0DFA92C1F76122300229288 /* GeoAddress.swift */,
-				B0DFA9381F76A71B00229288 /* RealmEmployee.swift */,
+				B0DFA9381F76A71B00229288 /* RealmModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */,
 				B0D3A7FA1F760F0500076C82 /* TasksTabVoiewController.swift in Sources */,
 				B0D3A80C1F7610CD00076C82 /* PermissionHelper.swift in Sources */,
+				B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */,
 				B0D3A8151F7610CD00076C82 /* VideoHelper.swift in Sources */,
 				B0DFA9371F76A62100229288 /* LeaderboardTabViewController.swift in Sources */,
 				B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */,
@@ -590,7 +597,8 @@
 				B0DFA9321F76A52500229288 /* QueueTabViewController.swift in Sources */,
 				B0D3A8121F7610CD00076C82 /* GlobalStyleHelper.swift in Sources */,
 				B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */,
-				B0DFA9391F76A71B00229288 /* RealmEmployee.swift in Sources */,
+				B0DFA9391F76A71B00229288 /* RealmModels.swift in Sources */,
+				B01B0E101F76BFAB007A6A62 /* JSONToRealmHelper.swift in Sources */,
 				B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */,
 				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
 				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
