@@ -25,7 +25,8 @@ class QueueTabViewController: UIViewController {
     lazy var tasks: [RealmTask]? = {
         do {
             let realm = try Realm()
-            return Array(realm.objects(RealmTask.self))
+            guard let tasks = realm.objects(RealmEmployee.self).filter("id = %@", "1234").first?.tasks else { return nil }
+            return Array(tasks)
             
         } catch _ { return nil }
     }()
@@ -49,7 +50,7 @@ class QueueTabViewController: UIViewController {
             let realm = try Realm()
             let tasks = realm.objects(RealmTask.self).filter( { [weak self] (task) -> Bool in
                 guard let strongSelf = self else { return false }
-                var descriptionArr = strongSelf.produceTaskArray(task)
+                let descriptionArr = strongSelf.produceTaskArray(task)
                 
                 let descriptionSet = Set(descriptionArr)
                 let searchSet = strongSelf.removeCommonWordsFromSearch(searchText)
@@ -78,7 +79,7 @@ class QueueTabViewController: UIViewController {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.rowHeight = UITableViewAutomaticDimension
-        view.register(TaskTableCell.self, forCellReuseIdentifier: NSStringFromClass(TaskTableCell.self))
+        view.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
         view.delegate = self
         view.dataSource = self
         return view
@@ -97,13 +98,12 @@ class QueueTabViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
         
-//        title = "Tasks for \(DateHelper.readableDate(Date()))"
+        title = "Tasks for \(DateHelper.readableDate(Date()))"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .search, color: .black, width: 35, height: 35).withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: .plain, target: self, action: #selector(pressedSearch))
     }
     
@@ -125,7 +125,7 @@ extension QueueTabViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TaskTableCell.self)) as? TaskTableCell, let tasks = tasks else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ListViewCell.self)) as? ListViewCell, let tasks = tasks else { return UITableViewCell() }
         cell.setTask(tasks[indexPath.row])
         let task = tasks[indexPath.row]
         print(task.name)

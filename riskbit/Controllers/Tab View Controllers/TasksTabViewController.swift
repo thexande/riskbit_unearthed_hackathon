@@ -11,10 +11,10 @@ import UIKit
 import RealmSwift
 
 class TasksTabViewController: UIViewController {
-    lazy var tasks: Results<RealmTask>? = {
+    lazy var tasks: [RealmTask]? = {
         do {
             let realm = try Realm()
-            return realm.objects(RealmTask.self)
+            return Array(realm.objects(RealmTask.self))
             
         } catch _ { return nil }
     }()
@@ -23,7 +23,7 @@ class TasksTabViewController: UIViewController {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.rowHeight = UITableViewAutomaticDimension
-        view.register(TaskTableCell.self, forCellReuseIdentifier: NSStringFromClass(TaskTableCell.self))
+        view.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
         view.delegate = self
         view.dataSource = self
         return view
@@ -64,7 +64,7 @@ extension TasksTabViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TaskTableCell.self)) as? TaskTableCell, let tasks = tasks else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ListViewCell.self)) as? ListViewCell, let tasks = tasks else { return UITableViewCell() }
         cell.setTask(tasks[indexPath.row])
         let task = tasks[indexPath.row]
         print(task.name)
@@ -76,5 +76,10 @@ extension TasksTabViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let tasks = tasks else { return 0 }
         return tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let tasks = tasks else { return }
+        navigationController?.pushViewController(TaskDetailViewController(tasks[indexPath.row]), animated: true)
     }
 }

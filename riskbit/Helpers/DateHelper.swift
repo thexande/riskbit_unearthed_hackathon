@@ -40,7 +40,7 @@ class DateHelper {
     
     static func readableDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "MM/dd/yyyy"
         return formatter.string(from: date)
     }
 }

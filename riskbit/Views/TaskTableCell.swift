@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TaskTableCell: UITableViewCell {
+class ListViewCell: UITableViewCell {
     let bubbleWidth: CGFloat = 40
     lazy var bubbleView: UIView = {
         let view = UIView()
@@ -26,6 +26,7 @@ class TaskTableCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 25)
         label.text = "T"
+        label.textAlignment = .center
         label.textColor = .black
         return label
     }()
@@ -49,6 +50,20 @@ class TaskTableCell: UITableViewCell {
     func setTask(_ task: RealmTask) {
         customTitleLabel.text = task.name
         customSubTitleLabel.text = task.task_description
+    }
+    
+    func setMitigation(_ mitigation: RealmMitigation) {
+        customTitleLabel.text = mitigation.name
+        customSubTitleLabel.text = mitigation.mitigation_description
+        bubbleLabel.text = "M"
+        bubbleView.backgroundColor = .purple
+    }
+    
+    func setRisk(_ risk: RealmRisk) {
+        bubbleView.backgroundColor = .red
+        bubbleLabel.text = "R"
+        customTitleLabel.text = risk.name
+        customSubTitleLabel.text = risk.risk_description
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

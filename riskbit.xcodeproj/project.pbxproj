@@ -11,6 +11,7 @@
 		AF06A6DB260744E7EF6867E9 /* Pods_riskbitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */; };
 		B01B0E101F76BFAB007A6A62 /* JSONToRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */; };
 		B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */; };
+		B02BE3881F772227001F4B18 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */; };
 		B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */; };
 		B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */; };
 		B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B056F4001F74DC8A009C91B3 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		A14F0730D30321834D093784 /* Pods_riskbitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONToRealmHelper.swift; sourceTree = "<group>"; };
 		B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCrudHelper.swift; sourceTree = "<group>"; };
+		B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		B056F3F61F74DC8A009C91B3 /* riskbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riskbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				B0DFA9331F76A56100229288 /* Tab View Controllers */,
 				B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */,
 				B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */,
+				B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */,
 				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
 				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
+				B02BE3881F772227001F4B18 /* TaskDetailViewController.swift in Sources */,
 				B0D619251F76EB3400D3249F /* TaskTableCell.swift in Sources */,
 				B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */,
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,
