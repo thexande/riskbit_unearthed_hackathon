@@ -9,7 +9,7 @@ class SpeechToTextSearchViewController: UIViewController, SFSpeechRecognizerDele
     @IBOutlet weak var HoldAndRelease: UIButton!
     @IBOutlet weak var buttonBackgroundImage: UIImageView!
     private let pscope = PermissionScope()
-    private let selectedImage: UIImage = FontAwesomeHelper.iconToImage(icon: .microphone, color: .black, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+    private let selectedImage: UIImage = FontAwesomeHelper.iconToImage(icon: .microphone, color: StyleConstants.light_blue, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
     private let unselectedImage: UIImage = FontAwesomeHelper.iconToImage(icon: .microphone, color: .white, width: 100, height: 100).withRenderingMode(UIImageRenderingMode.alwaysOriginal)
     private var speechRecognizer: SFSpeechRecognizer!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest!

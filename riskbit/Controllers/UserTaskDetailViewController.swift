@@ -32,6 +32,7 @@ class UserTaskDetailTableHeader: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(beginTaskButton)
+        addSubview(descriptionLabel)
         let views_dict: [String:UIView] = ["description":descriptionLabel, "task_button":beginTaskButton]
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-12-[description]-12-[task_button(40)]", options: [], metrics: nil, views:views_dict))
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[task_button]-12-|", options: [], metrics: nil, views:views_dict))
@@ -51,7 +52,9 @@ class UserTaskDetailViewController: UITableViewController {
         let view = UserTaskDetailTableHeader(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: view_height))
         return view
     }()
+    
     lazy var risks: [RealmRisk] = Array(self.task.risks)
+    
     lazy var mitigationTuples: [(RealmRisk, Set<RealmMitigation>)] = {
         return self.risks.map({ (risk) -> (RealmRisk, Set<RealmMitigation>) in
             return (risk, Set(risk.mitigations))
@@ -64,6 +67,7 @@ class UserTaskDetailViewController: UITableViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .never
         title = task.name
+        tableView.allowsMultipleSelection = true
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
         tableView.register(TaskDetailRiskHeaderView.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(TaskDetailRiskHeaderView.self))
@@ -76,7 +80,33 @@ class UserTaskDetailViewController: UITableViewController {
     }
     
     func beginTask() {
-        self.navigationController?.pushViewController(BeginNewTaskViewController(task: task), animated: true)
+        print("count here: \(tableView.indexPathsForSelectedRows?.count ?? 0)")
+        if tableView.indexPathsForSelectedRows?.count ?? 0 < 5 {
+            let beginTaskAlertController: UIAlertController = {
+                let controller = UIAlertController(title: "Mitigation Review for \(self.task.name)", message: "Please select a minimum of 5 mitigations you plan on implementing for \(self.task.name). Only \(tableView.indexPathsForSelectedRows?.count ?? 0) have been selected.", preferredStyle: .alert)
+                controller.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+                    
+                }))
+                return controller
+            }()
+            
+            self.present(beginTaskAlertController, animated: true, completion: nil)
+        } else {
+            let selectedMitigations = mitigationTuples.map({ $0.1 }).flatMap({ $0 }).enumerated().map({ [weak self] (index, mitigation) -> String? in
+                guard let selected = self?.tableView.indexPathsForSelectedRows?.map({ $0.row }) else { return nil }
+                print("\(selected), index: \(index)")
+                if selected.contains(index) {
+                    return "\(mitigation.name)"
+                } else { return nil }
+            }).flatMap({ $0 })
+            
+            let alert = UIAlertController(title: "Preparing to begin \(self.task.name)", message: "you have selected \(tableView.indexPathsForSelectedRows?.count ?? 0) mitigations:\n \(selectedMitigations.joined(separator: "\n"))", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.navigationController?.pushViewController(BeginNewTaskViewController(task: strongSelf.task), animated: true)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -90,6 +120,8 @@ class UserTaskDetailViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ListViewCell.self)) as? ListViewCell else { return UITableViewCell() }
         cell.setMitigation(mitigationTuples.map({ $0.1 }).flatMap({ $0 })[indexPath.row])
+        cell.accessoryType = cell.isSelected ? .checkmark : .none
+        cell.selectionStyle = .none // to prevent cells from being "highlighted"
         return cell
     }
     
@@ -104,6 +136,14 @@ class UserTaskDetailViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mitigationTuples.map({ $0.1.count }).reduce(0, { $0 + $1 })
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
 }
 
