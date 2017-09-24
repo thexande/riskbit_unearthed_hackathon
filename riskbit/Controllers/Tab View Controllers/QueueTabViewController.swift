@@ -11,7 +11,6 @@ import UIKit
 import RealmSwift
 import FuzzyMatchingSwift
 
-
 class QueueTabViewController: UIViewController {
     lazy var addTaskToQueueVC: UINavigationController = {
         let vc = AddTaskToQueueViewController(completion: { [weak self] selectedTasks in
@@ -86,6 +85,7 @@ extension QueueTabViewController: UITableViewDelegate, UITableViewDataSource {
         print(task.name)
         cell.customTitleLabel.text = task.name
         cell.customSubTitleLabel.text = task.task_description
+        cell.setCompletionStatus(indexPath.row == 1 || indexPath.row == 2)
         return cell
     }
     

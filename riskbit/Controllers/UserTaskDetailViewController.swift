@@ -11,8 +11,31 @@ import UIKit
 
 class UserTaskDetailTableHeader: UIView {
     
+    lazy var beginTaskButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 9
+        button.backgroundColor = StyleConstants.light_green
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Begin Task", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubview(beginTaskButton)
+        let views_dict: [String:UIView] = ["description":descriptionLabel, "task_button":beginTaskButton]
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-12-[description]-12-[task_button(40)]", options: [], metrics: nil, views:views_dict))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[task_button]-12-|", options: [], metrics: nil, views:views_dict))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[description]-12-|", options: [], metrics: nil, views:views_dict))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,6 +45,12 @@ class UserTaskDetailTableHeader: UIView {
 
 class UserTaskDetailViewController: UITableViewController {
     let task: RealmTask
+    lazy var tableHeaderView:UserTaskDetailTableHeader = {
+        let height = UILabel.height(for: self.task.task_description, width: UIScreen.main.bounds.width, font: UIFont.systemFont(ofSize: 13))
+        let view_height: CGFloat = 12 + 40 + 12 + height + 12
+        let view = UserTaskDetailTableHeader(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: view_height))
+        return view
+    }()
     lazy var risks: [RealmRisk] = Array(self.task.risks)
     lazy var mitigationTuples: [(RealmRisk, Set<RealmMitigation>)] = {
         return self.risks.map({ (risk) -> (RealmRisk, Set<RealmMitigation>) in
@@ -38,11 +67,16 @@ class UserTaskDetailViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
         tableView.register(TaskDetailRiskHeaderView.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(TaskDetailRiskHeaderView.self))
-        tableView.tableHeaderView = UserTaskDetailTableHeader(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        tableView.tableHeaderView = tableHeaderView
+        tableHeaderView.beginTaskButton.addTarget(self, action: #selector(beginTask), for: .touchUpInside)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func beginTask() {
+        self.navigationController?.pushViewController(BeginNewTaskViewController(task: task), animated: true)
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

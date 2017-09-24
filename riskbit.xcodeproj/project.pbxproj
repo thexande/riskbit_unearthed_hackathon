@@ -49,6 +49,7 @@
 		B0DFA9371F76A62100229288 /* LeaderboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9361F76A62100229288 /* LeaderboardTabViewController.swift */; };
 		B0DFA9391F76A71B00229288 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFA9381F76A71B00229288 /* RealmModels.swift */; };
 		B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */; };
+		B0EE3F791F781D010038A1D4 /* BeginNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EE3F781F781D010038A1D4 /* BeginNewTaskViewController.swift */; };
 		EFBB420898172B89048C50B5 /* Pods_riskbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6328833E1E18F6437146B1D3 /* Pods_riskbit.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		B0DFA9361F76A62100229288 /* LeaderboardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTabViewController.swift; sourceTree = "<group>"; };
 		B0DFA9381F76A71B00229288 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B0EE3F781F781D010038A1D4 /* BeginNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginNewTaskViewController.swift; sourceTree = "<group>"; };
 		CC280DFFD899DC83FF182F5A /* Pods-riskbitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riskbitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riskbitTests/Pods-riskbitTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32D70A20F38BDBF9CEBF4A /* Pods_riskbitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riskbitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -332,6 +334,7 @@
 				B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */,
 				B02BE3891F773FBF001F4B18 /* AddTaskToQueueViewController.swift */,
 				B06A1CC11F774D130049A7DB /* UserTaskDetailViewController.swift */,
+				B0EE3F781F781D010038A1D4 /* BeginNewTaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
 				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
 				B02BE3881F772227001F4B18 /* TaskDetailViewController.swift in Sources */,
+				B0EE3F791F781D010038A1D4 /* BeginNewTaskViewController.swift in Sources */,
 				B0D619251F76EB3400D3249F /* TaskTableCell.swift in Sources */,
 				B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */,
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,

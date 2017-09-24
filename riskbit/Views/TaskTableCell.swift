@@ -66,21 +66,28 @@ class ListViewCell: UITableViewCell {
         customSubTitleLabel.text = risk.risk_description
     }
     
+    func setCompletionStatus(_ isCompleted: Bool) {
+        completionTagView.isHidden = false
+        completionTagView.setCompletion(isCompleted)
+    }
+    
+    let completionTagView: CompletionStatusTagView = {
+        let tag = CompletionStatusTagView()
+        tag.isHidden = true
+        tag.translatesAutoresizingMaskIntoConstraints = false
+        return tag
+    }()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        let views_dict: [String:UIView] = ["title":customTitleLabel, "subtitle":customSubTitleLabel, "bubble":bubbleView]
+        let views_dict: [String:UIView] = ["title":customTitleLabel, "subtitle":customSubTitleLabel, "bubble":bubbleView, "tag":completionTagView]
         
         for view in views_dict.values {
             contentView.addSubview(view)
         }
-        let tag = CompletionStatusTagView()
-        tag.setCompletion(false)
-        tag.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(tag)
         
         NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: tag, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: -12),
-            NSLayoutConstraint(item: tag, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 12)
+            NSLayoutConstraint(item: completionTagView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 12)
         ])
         
         NSLayoutConstraint.activate([
@@ -92,7 +99,7 @@ class ListViewCell: UITableViewCell {
         ])
         
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-12-[title]-12-[subtitle]-12-|", options: [], metrics: nil, views: views_dict))
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[bubble]-12-[title]-12-|", options: [], metrics: nil, views: views_dict))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[bubble]-12-[title]-12-[tag]-12-|", options: [], metrics: nil, views: views_dict))
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[bubble]-12-[subtitle]-12-|", options: [], metrics: nil, views: views_dict))
     }
     

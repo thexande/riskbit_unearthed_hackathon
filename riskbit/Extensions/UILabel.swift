@@ -6,8 +6,8 @@
 ////  Copyright © 2017 Alexander Murphy. All rights reserved.
 ////
 //
-//import Foundation
-//import UIKit
+import Foundation
+import UIKit
 //
 ////
 ////  UILabel.swift
@@ -44,16 +44,17 @@
 //    }
 //}
 //
-//
-//extension UILabel {
-//    class func height(for string: String, width: CGFloat, font: UIFont) -> CGFloat {
-//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-//        label.font = font
-//        label.text = string
-//        label.numberOfLines = 0
-//        label.sizeToFit()
-//        return label.frame.height
-//    }
-//}
-//
-//
+
+extension UILabel {
+    class func height(for string: String, width: CGFloat, font: UIFont) -> CGFloat {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.font = font
+        label.text = string
+        label.numberOfLines = 0
+        label.sizeToFit()
+        return label.frame.height
+    }
+}
+
+
+
