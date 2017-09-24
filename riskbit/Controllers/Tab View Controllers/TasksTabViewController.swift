@@ -11,6 +11,15 @@ import UIKit
 import RealmSwift
 
 class TasksTabViewController: UIViewController {
+    lazy var textToSearchVC: UIViewController = {
+        let vc = SpeechToTextSearchViewController(completion: { [weak self] (searchText) in
+            print(searchText)
+            self?.searchWithText(searchText)
+        })
+        vc.modalPresentationStyle = .overFullScreen
+        return vc
+    }()
+    
     lazy var tasks: [RealmTask]? = {
         do {
             let realm = try Realm()
@@ -45,7 +54,10 @@ class TasksTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Site Tasks"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .plus, color: .black, width: 35, height: 35).withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: .plain, target: self, action: #selector(pressedNew))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .plus, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedNew))
+    
+    
+      navigationItem.leftBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .search, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedSearch))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,6 +67,54 @@ class TasksTabViewController: UIViewController {
     
     func pressedNew() {
         
+    }
+}
+
+extension TasksTabViewController {
+    
+    func produceTaskArray(_ task: RealmTask) -> [String] {
+        var descriptionArr = task.task_description.lowercased().components(separatedBy: " ")
+        descriptionArr.append(contentsOf: task.name.lowercased().components(separatedBy: " "))
+        return descriptionArr
+    }
+    
+    
+    func pressedSearch() {
+        present(textToSearchVC, animated: true, completion: nil)
+    }
+    
+    func removeCommonWordsFromSearch(_ searchText: String)  -> Set<String> {
+        return Set(searchText.components(separatedBy: " ").filter({ !DataConstants.unNeededWords.contains($0) }))
+    }
+    
+    func searchWithText(_ searchText: String) {
+        do {
+            let realm = try Realm()
+            let tasks = realm.objects(RealmTask.self).filter( { [weak self] (task) -> Bool in
+                guard let strongSelf = self else { return false }
+                let descriptionArr = strongSelf.produceTaskArray(task)
+                
+                let descriptionSet = Set(descriptionArr)
+                let searchSet = strongSelf.removeCommonWordsFromSearch(searchText)
+                
+                let occurances = descriptionSet.union(searchSet).count
+                return occurances != 0
+            }).sorted(by: { (task_one, task_two) -> Bool in
+                let searchSet = Set(searchText.components(separatedBy: " "))
+                let taskOneDescriptionSet = Set(produceTaskArray(task_one))
+                let taskTwoDescriptionSet = Set(produceTaskArray(task_two))
+                
+                let one_occurances = taskOneDescriptionSet.intersection(searchSet).count
+                let two_occurances = taskTwoDescriptionSet.intersection(searchSet).count
+                
+                return one_occurances > two_occurances
+            })
+            
+            self.tasks = tasks
+            tableView.reloadData()
+            
+            print(tasks.count)
+        } catch _ { return }
     }
 }
 

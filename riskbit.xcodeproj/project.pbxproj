@@ -12,12 +12,16 @@
 		B01B0E101F76BFAB007A6A62 /* JSONToRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */; };
 		B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */; };
 		B02BE3881F772227001F4B18 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */; };
+		B02BE38A1F773FBF001F4B18 /* AddTaskToQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BE3891F773FBF001F4B18 /* AddTaskToQueueViewController.swift */; };
 		B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */; };
 		B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */; };
 		B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B056F4001F74DC8A009C91B3 /* Assets.xcassets */; };
 		B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B056F4021F74DC8A009C91B3 /* LaunchScreen.storyboard */; };
 		B056F40F1F74DC8A009C91B3 /* riskbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F40E1F74DC8A009C91B3 /* riskbitTests.swift */; };
 		B056F41A1F74DC8A009C91B3 /* riskbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */; };
+		B06A1CC21F774D130049A7DB /* UserTaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC11F774D130049A7DB /* UserTaskDetailViewController.swift */; };
+		B06A1CC41F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC31F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift */; };
+		B06A1CC71F7753330049A7DB /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC61F7753330049A7DB /* StyleConstants.swift */; };
 		B0AA72EA1F76F60E0079B1E7 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72E91F76F60E0079B1E7 /* UILabel.swift */; };
 		B0AA72EC1F76F7690079B1E7 /* MappingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */; };
 		B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */; };
@@ -75,6 +79,7 @@
 		B01B0E0F1F76BFAB007A6A62 /* JSONToRealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONToRealmHelper.swift; sourceTree = "<group>"; };
 		B01B0E111F76C02C007A6A62 /* RealmCrudHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCrudHelper.swift; sourceTree = "<group>"; };
 		B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		B02BE3891F773FBF001F4B18 /* AddTaskToQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskToQueueViewController.swift; sourceTree = "<group>"; };
 		B056F3F61F74DC8A009C91B3 /* riskbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riskbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F3F91F74DC8A009C91B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +92,9 @@
 		B056F4151F74DC8A009C91B3 /* riskbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riskbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B056F4191F74DC8A009C91B3 /* riskbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riskbitUITests.swift; sourceTree = "<group>"; };
 		B056F41B1F74DC8A009C91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06A1CC11F774D130049A7DB /* UserTaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTaskDetailViewController.swift; sourceTree = "<group>"; };
+		B06A1CC31F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailRiskHeaderVIew.swift; sourceTree = "<group>"; };
+		B06A1CC61F7753330049A7DB /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
 		B0AA72E91F76F60E0079B1E7 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingModels.swift; sourceTree = "<group>"; };
 		B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTabViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 		B056F3F81F74DC8A009C91B3 /* riskbit */ = {
 			isa = PBXGroup;
 			children = (
+				B06A1CC51F77532A0049A7DB /* Constants */,
 				B0AA72E81F76F6020079B1E7 /* Extensions */,
 				B0D619231F76EB2B00D3249F /* Views */,
 				B0DFA92E1F76A27900229288 /* Services */,
@@ -223,6 +232,14 @@
 				B056F41B1F74DC8A009C91B3 /* Info.plist */,
 			);
 			path = riskbitUITests;
+			sourceTree = "<group>";
+		};
+		B06A1CC51F77532A0049A7DB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B06A1CC61F7753330049A7DB /* StyleConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		B0AA72E81F76F6020079B1E7 /* Extensions */ = {
@@ -259,6 +276,7 @@
 			children = (
 				B0D619291F76F40C00D3249F /* SpeechToTextSearch */,
 				B0D619241F76EB3400D3249F /* TaskTableCell.swift */,
+				B06A1CC31F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +327,8 @@
 				B056F3FB1F74DC8A009C91B3 /* RootViewController.swift */,
 				B0E0C7781F74E5BD000DD594 /* LoginViewController.swift */,
 				B02BE3871F772227001F4B18 /* TaskDetailViewController.swift */,
+				B02BE3891F773FBF001F4B18 /* AddTaskToQueueViewController.swift */,
+				B06A1CC11F774D130049A7DB /* UserTaskDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -627,10 +647,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D3A80F1F7610CD00076C82 /* PlayerHelper.swift in Sources */,
+				B06A1CC71F7753330049A7DB /* StyleConstants.swift in Sources */,
 				B0DFA9301F76A28700229288 /* APIService.swift in Sources */,
 				B0AA72EA1F76F60E0079B1E7 /* UILabel.swift in Sources */,
 				B0E0C7791F74E5BD000DD594 /* LoginViewController.swift in Sources */,
 				B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */,
+				B06A1CC21F774D130049A7DB /* UserTaskDetailViewController.swift in Sources */,
 				B0D3A80C1F7610CD00076C82 /* PermissionHelper.swift in Sources */,
 				B01B0E121F76C02C007A6A62 /* RealmCrudHelper.swift in Sources */,
 				B0AA72EC1F76F7690079B1E7 /* MappingModels.swift in Sources */,
@@ -647,6 +669,7 @@
 				B056F3FC1F74DC8A009C91B3 /* RootViewController.swift in Sources */,
 				B0DFA9391F76A71B00229288 /* RealmModels.swift in Sources */,
 				B01B0E101F76BFAB007A6A62 /* JSONToRealmHelper.swift in Sources */,
+				B02BE38A1F773FBF001F4B18 /* AddTaskToQueueViewController.swift in Sources */,
 				B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */,
 				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
 				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
@@ -656,6 +679,7 @@
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,
 				B0D3A80D1F7610CD00076C82 /* TimestampHelper.swift in Sources */,
 				B0D3A8111F7610CD00076C82 /* Reachability.swift in Sources */,
+				B06A1CC41F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

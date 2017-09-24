@@ -1,5 +1,5 @@
 //
-//  TaskDetailViewController.swift
+//  UserTaskDetailViewController.swift
 //  riskbit
 //
 //  Created by Alexander Murphy on 9/23/17.
@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-
-
-class TaskDetailViewController: UITableViewController {
+class UserTaskDetailViewController: UITableViewController {
     let task: RealmTask
     lazy var risks: [RealmRisk] = Array(self.task.risks)
     lazy var mitigationTuples: [(RealmRisk, Set<RealmMitigation>)] = {
@@ -23,12 +21,12 @@ class TaskDetailViewController: UITableViewController {
     init(_ task: RealmTask) {
         self.task = task
         super.init(nibName: nil, bundle: nil)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
         title = task.name
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
         tableView.register(TaskDetailRiskHeaderView.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(TaskDetailRiskHeaderView.self))
-        tableView.tableFooterView = UIView()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -62,3 +60,4 @@ class TaskDetailViewController: UITableViewController {
         return mitigationTuples.map({ $0.1.count }).reduce(0, { $0 + $1 })
     }
 }
+
