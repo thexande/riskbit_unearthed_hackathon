@@ -22,6 +22,7 @@
 		B06A1CC21F774D130049A7DB /* UserTaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC11F774D130049A7DB /* UserTaskDetailViewController.swift */; };
 		B06A1CC41F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC31F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift */; };
 		B06A1CC71F7753330049A7DB /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC61F7753330049A7DB /* StyleConstants.swift */; };
+		B06A1CC91F7774F30049A7DB /* AddTaskTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC81F7774F30049A7DB /* AddTaskTableHeaderView.swift */; };
 		B0AA72EA1F76F60E0079B1E7 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72E91F76F60E0079B1E7 /* UILabel.swift */; };
 		B0AA72EC1F76F7690079B1E7 /* MappingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */; };
 		B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */; };
@@ -95,6 +96,7 @@
 		B06A1CC11F774D130049A7DB /* UserTaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTaskDetailViewController.swift; sourceTree = "<group>"; };
 		B06A1CC31F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailRiskHeaderVIew.swift; sourceTree = "<group>"; };
 		B06A1CC61F7753330049A7DB /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
+		B06A1CC81F7774F30049A7DB /* AddTaskTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskTableHeaderView.swift; sourceTree = "<group>"; };
 		B0AA72E91F76F60E0079B1E7 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingModels.swift; sourceTree = "<group>"; };
 		B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTabViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				B0D619291F76F40C00D3249F /* SpeechToTextSearch */,
 				B0D619241F76EB3400D3249F /* TaskTableCell.swift */,
 				B06A1CC31F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift */,
+				B06A1CC81F7774F30049A7DB /* AddTaskTableHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				B0D619251F76EB3400D3249F /* TaskTableCell.swift in Sources */,
 				B0D3A8131F7610CD00076C82 /* FontAwesomeHelper.swift in Sources */,
 				B056F3FA1F74DC8A009C91B3 /* AppDelegate.swift in Sources */,
+				B06A1CC91F7774F30049A7DB /* AddTaskTableHeaderView.swift in Sources */,
 				B0D3A80D1F7610CD00076C82 /* TimestampHelper.swift in Sources */,
 				B0D3A8111F7610CD00076C82 /* Reachability.swift in Sources */,
 				B06A1CC41F7751EC0049A7DB /* TaskDetailRiskHeaderVIew.swift in Sources */,

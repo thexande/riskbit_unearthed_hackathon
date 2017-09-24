@@ -73,6 +73,15 @@ class ListViewCell: UITableViewCell {
         for view in views_dict.values {
             contentView.addSubview(view)
         }
+        let tag = CompletionStatusTagView()
+        tag.setCompletion(false)
+        tag.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(tag)
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: tag, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: -12),
+            NSLayoutConstraint(item: tag, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 12)
+        ])
         
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: bubbleView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: bubbleWidth),

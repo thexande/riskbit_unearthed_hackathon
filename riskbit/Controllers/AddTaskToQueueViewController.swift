@@ -10,21 +10,54 @@ import Foundation
 import UIKit
 import RealmSwift
 
+class CompletionStatusTagView: UIView {
+    func setCompletion(_ completed: Bool) {
+        if completed {
+            self.backgroundColor = StyleConstants.light_green
+            statusLabel.text = "completed".uppercased()
+        } else {
+            self.backgroundColor = StyleConstants.dark_red
+            statusLabel.text = "unstarted".uppercased()
+        }
+    }
+    
+    let statusLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 10)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        layer.cornerRadius = 6
+        clipsToBounds = true
+        addSubview(statusLabel)
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-6-[label]-6-|", options: [], metrics: nil, views: ["label":statusLabel]))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-6-[label]-6-|", options: [], metrics: nil, views: ["label":statusLabel]))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class AddTaskToQueueViewController: UITableViewController {
     let completion: (([RealmTask]) -> Void)
     var tasks: [RealmTask]?
-    
     
     init(completion: @escaping(_ selectedTaskIds: [RealmTask]) -> Void, currentTasks: [RealmTask]) {
         self.completion = completion
         super.init(nibName: nil, bundle: nil)
         title = "Add Tasks to Queue"
         tableView.allowsMultipleSelection = true
-        
+        tableView.tableHeaderView = AddTaskTableHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 220))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .times, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedClose))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .check, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedComplete))
-        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .check, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedComplete))
+        ]
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))

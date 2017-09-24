@@ -9,6 +9,17 @@
 import Foundation
 import UIKit
 
+class UserTaskDetailTableHeader: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class UserTaskDetailViewController: UITableViewController {
     let task: RealmTask
     lazy var risks: [RealmRisk] = Array(self.task.risks)
@@ -27,6 +38,7 @@ class UserTaskDetailViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
         tableView.register(TaskDetailRiskHeaderView.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(TaskDetailRiskHeaderView.self))
+        tableView.tableHeaderView = UserTaskDetailTableHeader(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
     }
     
     required init?(coder aDecoder: NSCoder) {
