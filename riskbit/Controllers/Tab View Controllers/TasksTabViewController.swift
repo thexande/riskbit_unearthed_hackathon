@@ -10,7 +10,39 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class TasksTabViewController: UIViewController {
+class TasksTabVC: UIViewController {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        let split = TasksTabSplitViewController()
+        split.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(split.view)
+        split.didMove(toParentViewController: self)
+        
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[split]|", options: [], metrics: nil, views: ["split":split.view]))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[split]|", options: [], metrics: nil, views: ["split":split.view]))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class TasksTabSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        title = "woot"
+        let vc = UIViewController()
+        vc.view.backgroundColor = .green
+        viewControllers = [UITableViewController(), vc]
+        preferredDisplayMode = .allVisible
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class TasksTabViewController: UITableViewController {
     lazy var textToSearchVC: UIViewController = {
         let vc = SpeechToTextSearchViewController(completion: { [weak self] (searchText) in
             print(searchText)
@@ -27,32 +59,19 @@ class TasksTabViewController: UIViewController {
             
         } catch _ { return nil }
     }()
-    
-    lazy var tableView: UITableView = {
-        let view = UITableView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.rowHeight = UITableViewAutomaticDimension
-        view.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
-        view.delegate = self
-        view.dataSource = self
-        return view
-    }()
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        let views_dict: [String:UIView] = ["table":tableView]
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[table]|", options: [], metrics: nil, views: views_dict))
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[table]|", options: [], metrics: nil, views: views_dict))
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.searchController = UISearchController()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(ListViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListViewCell.self))
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         title = "Site Tasks"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .plus, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedNew))
     
@@ -118,12 +137,12 @@ extension TasksTabViewController {
     }
 }
 
-extension TasksTabViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+extension TasksTabViewController {
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ListViewCell.self)) as? ListViewCell, let tasks = tasks else { return UITableViewCell() }
         cell.setTask(tasks[indexPath.row])
         let task = tasks[indexPath.row]
@@ -133,13 +152,17 @@ extension TasksTabViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let tasks = tasks else { return 0 }
         return tasks.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let tasks = tasks else { return }
-        navigationController?.pushViewController(TaskDetailViewController(tasks[indexPath.row]), animated: true)
+        guard let split = self.splitViewController else { return }
+        let controllers = split.viewControllers
+        guard let nav = controllers[controllers.count - 1] as? UINavigationController else { return }
+        guard let detailViewController = nav.viewControllers[nav.viewControllers.count - 1] as? TaskDetailViewController else { return }
+        detailViewController.task = tasks[indexPath.row]
     }
 }

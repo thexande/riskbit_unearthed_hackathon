@@ -56,7 +56,7 @@ class ListViewCell: UITableViewCell {
         customTitleLabel.text = mitigation.name
         customSubTitleLabel.text = mitigation.mitigation_description
         bubbleLabel.text = "M"
-        bubbleView.backgroundColor = StyleConstants.light_green
+        bubbleView.backgroundColor = StyleConstants.super_light_green
     }
     
     func setRisk(_ risk: RealmRisk) {

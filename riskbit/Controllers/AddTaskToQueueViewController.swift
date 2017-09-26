@@ -13,7 +13,7 @@ import RealmSwift
 class CompletionStatusTagView: UIView {
     func setCompletion(_ completed: Bool) {
         if completed {
-            self.backgroundColor = StyleConstants.light_green
+            self.backgroundColor = StyleConstants.super_light_green
             statusLabel.text = "completed".uppercased()
         } else {
             self.backgroundColor = StyleConstants.dark_red
@@ -43,16 +43,29 @@ class CompletionStatusTagView: UIView {
     }
 }
 
+
 class AddTaskToQueueViewController: UITableViewController {
     let completion: (([RealmTask]) -> Void)
     var tasks: [RealmTask]?
+    
+    lazy var textToSearchVC: UIViewController = {
+        let vc = SpeechToTextSearchViewController(completion: { [weak self] (searchText) in
+            print(searchText)
+            self?.searchWithText(searchText)
+        })
+        vc.modalPresentationStyle = .overFullScreen
+        return vc
+    }()
+    
+    let header = AddTaskTableHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 220))
     
     init(completion: @escaping(_ selectedTaskIds: [RealmTask]) -> Void, currentTasks: [RealmTask]) {
         self.completion = completion
         super.init(nibName: nil, bundle: nil)
         title = "Add Tasks to Queue"
         tableView.allowsMultipleSelection = true
-        tableView.tableHeaderView = AddTaskTableHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 220))
+        tableView.tableHeaderView = header
+        header.searchButton.addTarget(self, action: #selector(pressedSearch), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: FontAwesomeHelper.iconToImage(icon: .times, color: .black, width: 35, height: 35), style: .plain, target: self, action: #selector(pressedClose))
         
         navigationItem.rightBarButtonItems = [
@@ -124,4 +137,53 @@ class AddTaskToQueueViewController: UITableViewController {
         guard let tasks = tasks else { return }
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
+}
+
+extension AddTaskToQueueViewController {
+    
+    func produceTaskArray(_ task: RealmTask) -> [String] {
+        var descriptionArr = task.task_description.lowercased().components(separatedBy: " ")
+        descriptionArr.append(contentsOf: task.name.lowercased().components(separatedBy: " "))
+        return descriptionArr
+    }
+    
+    
+    func pressedSearch() {
+        present(textToSearchVC, animated: true, completion: nil)
+    }
+    
+    func removeCommonWordsFromSearch(_ searchText: String)  -> Set<String> {
+        return Set(searchText.components(separatedBy: " ").filter({ !DataConstants.unNeededWords.contains($0) }))
+    }
+    
+    func searchWithText(_ searchText: String) {
+        do {
+            let realm = try Realm()
+            let tasks = realm.objects(RealmTask.self).filter( { [weak self] (task) -> Bool in
+                guard let strongSelf = self else { return false }
+                let descriptionArr = strongSelf.produceTaskArray(task)
+                
+                let descriptionSet = Set(descriptionArr)
+                let searchSet = strongSelf.removeCommonWordsFromSearch(searchText)
+                
+                let occurances = descriptionSet.union(searchSet).count
+                return occurances != 0
+            }).sorted(by: { (task_one, task_two) -> Bool in
+                let searchSet = Set(searchText.components(separatedBy: " "))
+                let taskOneDescriptionSet = Set(produceTaskArray(task_one))
+                let taskTwoDescriptionSet = Set(produceTaskArray(task_two))
+                
+                let one_occurances = taskOneDescriptionSet.intersection(searchSet).count
+                let two_occurances = taskTwoDescriptionSet.intersection(searchSet).count
+                
+                return one_occurances > two_occurances
+            })
+            
+            self.tasks = tasks
+            tableView.reloadData()
+            
+            print(tasks.count)
+        } catch _ { return }
+    }
+    
 }

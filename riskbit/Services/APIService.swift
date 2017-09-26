@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class APIService {
     static func fetchEmployeesJSON() -> Promise<JSON> {
-        let url = URL(string:"http://10.2.4.161:8080/employee/1234")!
+        let url = URL(string:"http://ec2-54-201-167-124.us-west-2.compute.amazonaws.com:8080/employee/1234")!
         return Promise { resolve, reject in
             Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseSwiftyJSON { response in
                 let error = NSError(domain: "", code: response.response?.statusCode ?? 0, userInfo: nil)
@@ -25,7 +25,7 @@ class APIService {
     }
     
     static func fetchAllTasks() -> Promise<JSON> {
-        let url = URL(string:"http://10.2.4.161:8080/tasks")!
+        let url = URL(string:"http://ec2-54-201-167-124.us-west-2.compute.amazonaws.com:8080/tasks")!
         return Promise { resolve, reject in
             Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseSwiftyJSON { response in
                 let error = NSError(domain: "", code: response.response?.statusCode ?? 0, userInfo: nil)

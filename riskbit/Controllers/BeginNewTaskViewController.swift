@@ -133,6 +133,7 @@ class BeginNewTaskViewController: UITableViewController {
         cell.textLabel?.text = data.title
         cell.detailTextLabel?.text = data.sub_title
         cell.detailTextLabel?.numberOfLines = 0
+        cell.textLabel?.numberOfLines = 0
         cell.imageView?.image = data.icon_image
         return cell
     }

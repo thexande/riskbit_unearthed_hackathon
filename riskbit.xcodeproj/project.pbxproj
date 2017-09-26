@@ -25,6 +25,8 @@
 		B06A1CC91F7774F30049A7DB /* AddTaskTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A1CC81F7774F30049A7DB /* AddTaskTableHeaderView.swift */; };
 		B0AA72EA1F76F60E0079B1E7 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72E91F76F60E0079B1E7 /* UILabel.swift */; };
 		B0AA72EC1F76F7690079B1E7 /* MappingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */; };
+		B0CB94861F79F1AD00675D14 /* TasksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0CB94851F79F1AD00675D14 /* TasksStoryboard.storyboard */; };
+		B0CB94881F79F26F00675D14 /* TasksStoryboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB94871F79F26F00675D14 /* TasksStoryboardVC.swift */; };
 		B0D3A7FA1F760F0500076C82 /* TasksTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */; };
 		B0D3A7FC1F76104500076C82 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */; };
 		B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */; };
@@ -100,6 +102,8 @@
 		B06A1CC81F7774F30049A7DB /* AddTaskTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskTableHeaderView.swift; sourceTree = "<group>"; };
 		B0AA72E91F76F60E0079B1E7 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B0AA72EB1F76F7690079B1E7 /* MappingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingModels.swift; sourceTree = "<group>"; };
+		B0CB94851F79F1AD00675D14 /* TasksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TasksStoryboard.storyboard; sourceTree = "<group>"; };
+		B0CB94871F79F26F00675D14 /* TasksStoryboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksStoryboardVC.swift; sourceTree = "<group>"; };
 		B0D3A7F91F760F0500076C82 /* TasksTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTabViewController.swift; sourceTree = "<group>"; };
 		B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
 		B0D3A7FE1F7610CD00076C82 /* DistanceCalculationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculationHelper.swift; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 				B0D3A7FB1F76104500076C82 /* RootTabBarViewController.swift */,
 				B0DFA9341F76A5CA00229288 /* AccountTabViewController.swift */,
 				B0DFA9361F76A62100229288 /* LeaderboardTabViewController.swift */,
+				B0CB94851F79F1AD00675D14 /* TasksStoryboard.storyboard */,
+				B0CB94871F79F26F00675D14 /* TasksStoryboardVC.swift */,
 			);
 			path = "Tab View Controllers";
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0CB94861F79F1AD00675D14 /* TasksStoryboard.storyboard in Resources */,
 				B0D6192C1F76F42000D3249F /* SpeechToTextSearchViewController.xib in Resources */,
 				B056F4041F74DC8A009C91B3 /* LaunchScreen.storyboard in Resources */,
 				B056F4011F74DC8A009C91B3 /* Assets.xcassets in Resources */,
@@ -677,6 +684,7 @@
 				B01B0E101F76BFAB007A6A62 /* JSONToRealmHelper.swift in Sources */,
 				B02BE38A1F773FBF001F4B18 /* AddTaskToQueueViewController.swift in Sources */,
 				B0D3A80A1F7610CD00076C82 /* DistanceCalculationHelper.swift in Sources */,
+				B0CB94881F79F26F00675D14 /* TasksStoryboardVC.swift in Sources */,
 				B0D3A80B1F7610CD00076C82 /* LocationHelper.swift in Sources */,
 				B0D3A8101F7610CD00076C82 /* DateHelper.swift in Sources */,
 				B02BE3881F772227001F4B18 /* TaskDetailViewController.swift in Sources */,

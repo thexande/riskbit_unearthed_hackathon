@@ -23,11 +23,16 @@ class RootTabBarViewController: UITabBarController {
     }()
     
     let tabTwoItem: UIViewController = {
-        let vc = UINavigationController(rootViewController: TasksTabViewController())
+//        let vc = TasksTabVC()
+        
+        
+        guard let vc = UIStoryboard(name: "TasksStoryboard", bundle: nil).instantiateInitialViewController() else { return UIViewController() }
+        
+
         let cheersBoardIcon = FontAwesomeHelper.iconToImage(icon: FontAwesome.check, color: .black, width: 35, height: 35)
         let item = UITabBarItem(title: "tasks".uppercased(), image: cheersBoardIcon, selectedImage: cheersBoardIcon)
-        vc.navigationBar.prefersLargeTitles = true
-        vc.navigationItem.largeTitleDisplayMode = .always
+//        vc.navigationBar.prefersLargeTitles = true
+//        vc.navigationItem.largeTitleDisplayMode = .always
         vc.tabBarItem = item
         return vc
     }()

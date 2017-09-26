@@ -26,9 +26,9 @@ class AddTaskTableHeaderView: UIView {
         let button = UIButton()
         button.layer.cornerRadius = 9
         button.backgroundColor = .clear
-        button.layer.borderColor = StyleConstants.purple.cgColor
+        button.layer.borderColor = StyleConstants.light_blue.cgColor
         button.layer.borderWidth = 3
-        button.setTitleColor(StyleConstants.purple, for: .normal)
+        button.setTitleColor(StyleConstants.light_blue, for: .normal)
         button.setTitle("Search For Task", for: .normal)
         //        button.setImage(FontAwesomeHelper.iconToImage(icon: .search, color: StyleConstants.purple, width: 35, height: 35).withRenderingMode(.alwaysOriginal), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
